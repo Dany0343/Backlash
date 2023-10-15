@@ -1,11 +1,11 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import './globals.css';
+import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Backlash',
-  description: '',
+  description: 'Backlash is a platform for anyone to share their cinematic creations. Dive into a world of user-generated content, available for viewing 24/7',
 }
 
 export default function RootLayout({ children }) {
