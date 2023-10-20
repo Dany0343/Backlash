@@ -15,16 +15,17 @@ export default function Page() {
 
   return (
     <>
-      {/* {loadingFinished ? (
+      {loadingFinished ? (
         <animated.div style={contentProps}>
           <Header />
           <main>
             <div className="h-[800px] border-2 border-white m-9 rounded-md">
               <iframe
+                id="player"
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/_SPoSMmN3ZU"
-                title="YouTube video player"
+                title="Backlash streaming"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -33,21 +34,22 @@ export default function Page() {
         </animated.div>
       ) : (
         <LoadingScreen onFinished={() => setLoadingFinished(true)} />
-      )} */}
+      )}
 
-      <Header />
+      {/* <Header />
       <main>
         <div className="h-[800px] border-2 border-white m-9 rounded-md">
           <iframe
+            id="player"
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/_SPoSMmN3ZU"
-            title="YouTube video player"
+            title="Backash streaming"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>
-      </main>
+      </main> */}
     </>
   );
 }

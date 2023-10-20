@@ -43,86 +43,118 @@ export default function Community() {
         "Camp counselors are stalked and murdered by an unknown assailant while trying to reopen a summer camp that was the site of a child’s drowning.",
       user: "Socrates",
     },
-    {image:TalkToMe ,
+    {
+      image: TalkToMe,
       title: "Talk to Me",
       description:
         "Camp counselors are stalked and murdered by an unknown assailant while trying to reopen a summer camp that was the site of a child’s drowning.",
-      user: "Platón",},
-    {image: SAWX,
+      user: "Platón",
+    },
+    {
+      image: SAWX,
       title: "Saw X",
       description:
         "Camp counselors are stalked and murdered by an unknown assailant while trying to reopen a summer camp that was the site of a child’s drowning.",
-      user: "Aristoteles",},
-    {image: Bottoms,
+      user: "Aristoteles",
+    },
+    {
+      image: Bottoms,
       title: "Bottoms",
       description:
         "PJ and Josie start a fight club as a way to lose their virginities to cheerleaders. The fight club gains traction and soon the most popular girls in school are beating each other up in the name of self-defense. But the pair find themselves in over their heads and in need of a way out before their plan is exposed.",
-      user: "Epicteto",},
-    {image: Scream,
+      user: "Epicteto",
+    },
+    {
+      image: Scream,
       title: "Scream",
       description:
         "A killer known as Ghostface begins killing off teenagers, and as the body count begins rising, one girl and her friends find themselves contemplating the ‘rules’ of horror films as they find themselves living in a real-life one.",
-      user: "Tales",},
-    {image: Getout,
+      user: "Tales",
+    },
+    {
+      image: Getout,
       title: "Get Out",
       description:
         "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family’s overly accommodating behavior as nervous attempts to deal with their daughter’s interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.",
-      user: "HP. Lovecraft",},
-    {image: TheCreator,
+      user: "HP. Lovecraft",
+    },
+    {
+      image: TheCreator,
       title: "The creator",
       description:
         "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family’s overly accommodating behavior as nervous attempts to deal with their daughter’s interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.",
-      user: "Alan Turing",},
-    {image: TheExorcist,
+      user: "Alan Turing",
+    },
+    {
+      image: TheExorcist,
       title: "The Exorcist: Believer",
       description:
         "Since the death of his wife 12 years ago, Victor Fielding has raised their daughter, Angela on his own. But when Angela and her friend Katherine disappear in the woods, only to return three days later with no memory of what happened to them, it unleashes a chain of events that will force Victor to confront the nadir of evil and, in his terror and desperation, seek out the only person alive who has witnessed anything like it before: Chris MacNeil.",
-      user: "Papa Francisco",},
-    {image: Pearl,
+      user: "Papa Francisco",
+    },
+    {
+      image: Pearl,
       title: "Pearl",
       description:
         "Trapped on her family’s isolated farm, Pearl must tend to her ailing father under the bitter and overbearing watch of her devout mother. Lusting for a glamorous life like she’s seen in the movies, Pearl’s ambitions, temptations, and repressions all collide, in the stunning, technicolor-inspired origin story of X’s iconic villain.",
-      user: "Mahoma",},
-    {image: Fairplay,
+      user: "Mahoma",
+    },
+    {
+      image: Fairplay,
       title: "Fair Play",
       description:
         "An unexpected promotion at a cutthroat hedge fund pushes a young couple’s relationship to the brink, threatening to unravel not only their recent engagement but their lives.",
-      user: "Michael Jackson",},
-    {image: SAW,
+      user: "Michael Jackson",
+    },
+    {
+      image: SAW,
       title: "Saw",
       description:
         "An unexpected promotion at a cutthroat hedge fund pushes a young couple’s relationship to the brink, threatening to unravel not only their recent engagement but their lives.",
-      user: "",},
-    {image: FightClub,
+      user: "",
+    },
+    {
+      image: FightClub,
       title: "Fight Club",
       description:
         "An unexpected promotion at a cutthroat hedge fund pushes a young couple’s relationship to the brink, threatening to unravel not only their recent engagement but their lives.",
-      user: "Ghandi",},
-    {image: Exorcist,
+      user: "Ghandi",
+    },
+    {
+      image: Exorcist,
       title: "The Exorcist",
       description:
         "12-year-old Regan MacNeil begins to adapt an explicit new personality as strange events befall the local area of Georgetown. Her mother becomes torn between science and superstition in a desperate bid to save her daughter, and ultimately turns to her last hope: Father Damien Karras, a troubled priest who is struggling with his own faith.",
-      user: "Santo Tomas de Aquino",},
-    {image: Oppen,
+      user: "Santo Tomas de Aquino",
+    },
+    {
+      image: Oppen,
       title: "Oppenheimer",
       description:
         "The story of J. Robert Oppenheimer’s role in the development of the atomic bomb during World War II.",
-      user: "Einstein",},
-    {image: NoOne,
+      user: "Einstein",
+    },
+    {
+      image: NoOne,
       title: "No One Will Save You",
       description:
         "A young woman who’s been alienated from her community finds herself in a face-off against a host of extraterrestrial beings who threaten her future while forcing her to deal with her past.",
-      user: "Jaime Maussan",},
-    {image: Pastlives,
+      user: "Jaime Maussan",
+    },
+    {
+      image: Pastlives,
       title: "Past Lives",
       description:
         "Nora and Hae Sung, two deeply connected childhood friends, are wrest apart after Nora’s family emigrates from South Korea. 20 years later, they are reunited for one fateful week as they confront notions of love and destiny.",
-      user: "ChatGPT",},
-    {image: TheShining,
+      user: "ChatGPT",
+    },
+    {
+      image: TheShining,
       title: "The Shining",
       description:
         "Nora and Hae Sung, two deeply connected childhood friends, are wrest apart after Nora’s family emigrates from South Korea. 20 years later, they are reunited for one fateful week as they confront notions of love and destiny.",
-      user: "Oscar Bucio",},
+      user: "Oscar Bucio",
+    },
     // Poner mas peliculas
   ];
 
