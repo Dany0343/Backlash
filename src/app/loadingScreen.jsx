@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useSpring, animated } from "react-spring";
 import { useState } from "react";

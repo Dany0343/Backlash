@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { useSpring, animated } from "react-spring";
@@ -21,10 +21,11 @@ export default function Page() {
           <main>
             <div className="h-[800px] border-2 border-white m-9 rounded-md">
               <iframe
+                id="player"
                 width="100%"
                 height="100%"
                 src="https://www.youtube.com/embed/_SPoSMmN3ZU"
-                title="YouTube video player"
+                title="Backlash streaming"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -34,6 +35,21 @@ export default function Page() {
       ) : (
         <LoadingScreen onFinished={() => setLoadingFinished(true)} />
       )}
+
+      {/* <Header />
+      <main>
+        <div className="h-[800px] border-2 border-white m-9 rounded-md">
+          <iframe
+            id="player"
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/_SPoSMmN3ZU"
+            title="Backash streaming"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </main> */}
     </>
   );
 }
