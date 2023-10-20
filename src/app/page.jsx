@@ -19,12 +19,13 @@ export default function Page() {
         <animated.div style={contentProps}>
           <Header />
           <main>
+          <h1 className="text-white ml-9 mr-9 text-center">Narcocultura - 2010</h1>
             <div className="h-[800px] border-2 border-white m-9 rounded-md">
               <iframe
                 id="player"
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/_SPoSMmN3ZU"
+                src="https://1714-189-203-145-167.ngrok-free.app"
                 title="Backlash streaming"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
