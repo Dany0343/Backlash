@@ -1,42 +1,31 @@
-"use client";
-
-import { useState } from "react";
-import { useSpring, animated } from "react-spring";
-import { LoadingScreen } from "./loadingScreen";
 import Header from "./Header";
 
 export default function Page() {
-  const [loadingFinished, setLoadingFinished] = useState(false);
-
-  const contentProps = useSpring({
-    opacity: loadingFinished ? 1 : 0,
-    from: { opacity: 0 },
-  });
 
   return (
     <>
-      {loadingFinished ? (
-        <animated.div style={contentProps}>
-          <Header />
-          <main>
-          <h1 className="text-white ml-9 mr-9 text-center">Narcocultura - 2010</h1>
-            <div className="h-[800px] border-2 border-white m-9 rounded-md">
-              <iframe
-                id="player"
-                width="100%"
-                height="100%"
-                src="https://1714-189-203-145-167.ngrok-free.app"
-                title="Backlash streaming"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </main>
-        </animated.div>
-      ) : (
-        <LoadingScreen onFinished={() => setLoadingFinished(true)} />
-      )}
+      <div>
+        <Header />
+        <main>
+          <h1 className="text-white ml-9 mr-9 text-center">
+            Narcocultura - 2010
+          </h1>
+          <div className="h-[800px] border-2 border-white m-9 rounded-md">
+            {/* Dentro de este div debe de ir el componente de video */}
+            <iframe
+              id="player"
+              width="100%"
+              height="100%"
+              src="https://1714-189-203-145-167.ngrok-free.app"
+              title="Backlash streaming"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </main>
+      </div>
 
+      {/* Forma antigua de poner cargar componente */}
       {/* <Header />
       <main>
         <div className="h-[800px] border-2 border-white m-9 rounded-md">
@@ -52,7 +41,6 @@ export default function Page() {
         </div>
       </main> */}
 
-
       {/* 
 
            .----.
@@ -63,7 +51,6 @@ export default function Page() {
         `--------'
 
       */}
-
     </>
   );
 }
