@@ -23,7 +23,7 @@ export default function Page() {
             ></iframe>
           </div>
         </main>
-      </div>
+      </div> 
 
       {/* Forma antigua de poner cargar componente */}
       {/* <Header />
