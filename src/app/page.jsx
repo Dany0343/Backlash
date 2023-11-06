@@ -8,7 +8,7 @@ export default function Page() {
         <Header />
         <main>
           <h1 className="text-white ml-9 mr-9 text-center">
-            Narcocultura - 2010
+          {/* Aqui tiene que ir un h1 dinamico con el nombre */}
           </h1>
           <div className="h-[800px] border-2 border-white m-9 rounded-md">
             {/* Dentro de este div debe de ir el componente de video */}
