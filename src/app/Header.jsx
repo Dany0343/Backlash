@@ -13,7 +13,6 @@ export default function Header() {
         <Link
           href="/"
           className="text-5xl font-bold glitch cursor-pointer"
-          data-glitch="Backlash"
         >
           Backlash
         </Link>
@@ -21,7 +20,7 @@ export default function Header() {
           href="./community"
           className="cursor-pointer text-white font-bold text-xl"
         >
-          Community
+          Peliculas
         </Link>
       </ul>
     </header>
