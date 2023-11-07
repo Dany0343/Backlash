@@ -1,5 +1,5 @@
 import Header from "../Header";
-import Card from "./card";
+import Card from "./Card";
 import TotallyKiller from "../../../public/images/TotallyKiller.png";
 import Barbie from "../../../public/images/Barbie.png";
 import Bottoms from "../../../public/images/Bottoms.png";
