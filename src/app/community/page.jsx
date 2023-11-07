@@ -146,7 +146,7 @@ export default function Community() {
       title: "Past Lives",
       description:
         "Nora and Hae Sung, two deeply connected childhood friends, are wrest apart after Nora’s family emigrates from South Korea. 20 years later, they are reunited for one fateful week as they confront notions of love and destiny.",
-      user: "ChatGPT",
+      user: "Kanye West",
     },
     {
       image: TheShining,

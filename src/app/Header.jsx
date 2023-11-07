@@ -23,6 +23,12 @@ export default function Header() {
         >
           Community
         </Link>
+        <Link
+          href="./moviepage"
+          className="cursor-pointer text-white font-bold text-xl"
+        >
+          TEST MOVIE PAGE
+        </Link>
       </ul>
     </header>
 
