@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Image from "next/image";
-import Logo from "../../public/images/backlash.png";
+import Logo from "../../public/images/hero.png";
 
 export default function Page() {
   return (
@@ -8,15 +8,28 @@ export default function Page() {
       <div>
         <Header />
         <main>
-          <div className="h-full m-9 rounded-md">
-            <div className="flex">
+          <div className="h-screen m-9 rounded-md">
+            <div className="flex sm:flex-col">
               <Image
                 src={Logo}
                 width={400}
                 height={400}
                 alt="Picture of the author"
+                className="rounded-md sm: w-[200px] h-[200px]"
               ></Image>
-              <p className="text-white font-bold text-6xl self-center lg:ml-20">Backlash is a platform for anyone to share their cinematic creations. Dive into a world of user-generated content, available for viewing 24/7.</p>
+              <p className="text-white font-bold text-6xl self-center lg:ml-20 sm:text-sm">
+                Backlash is a platform for anyone to share their cinematic
+                creations. Dive into a world of user-generated content,
+                available for viewing 24/7.
+              </p>
+            </div>
+            <div className="flex">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Button
+              </button>
+              <button className="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                Button
+              </button>
             </div>
           </div>
         </main>
