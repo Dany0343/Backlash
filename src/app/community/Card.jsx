@@ -2,7 +2,7 @@ import Image from "next/image";
 
 function Card({ image, title, description, user }) {
   return (
-    <div className="m-4 w-64 border-4 border-white transform transition-transform duration-300 hover:scale-105 shadow-lg rounded-lg overflow-hidden hover:shadow-xl lg: w-70">
+    <div className="m-4 h-[700px] w-64 border-4 border-white transform transition-transform duration-300 hover:scale-105 shadow-lg rounded-lg overflow-hidden hover:shadow-xl lg:w-70">
       <Image
         src={image}
         alt={title}
