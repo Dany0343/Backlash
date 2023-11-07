@@ -19,6 +19,7 @@ import TalkToMe from "../../../public/images/TalktoMe.png";
 import TheCreator from "../../../public/images/thecreator.png";
 import TheExorcist from "../../../public/images/theexorcist.png";
 import TheShining from "../../../public/images/theshining.png";
+import Link from "next/link";
 
 export default function Community() {
   const movies = [
@@ -89,7 +90,7 @@ export default function Community() {
       image: TheExorcist,
       title: "The Exorcist: Believer",
       description:
-        "Since the death of his wife 12 years ago, Victor Fielding has raised their daughter, Angela on his own. But when Angela and her friend Katherine disappear in the woods, only to return three days later with no memory of what happened to them, it unleashes a chain of events that will force Victor to confront the nadir of evil and, in his terror and desperation, seek out the only person alive who has witnessed anything like it before: Chris MacNeil.",
+        "Since the death of his wife 12 years ago, Victor Fielding has raised their daughter, Angela on his own. But when Angela and her friend Katherine disappear in the woods, only to return three days later with no memory of what happened to them.",
       user: "Papa Francisco",
     },
     {
@@ -164,13 +165,25 @@ export default function Community() {
       <h1 className="text-center text-2xl my-4">Peliculas</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 border-2 border-white m-9 rounded-md lg:justify-center justify-items-center">
         {movies.map((movie, index) => (
-          <Card
+          <Link
+            href={{
+              pathname: "/watch",
+              query: {
+                image: movie.componentName,
+                title: movie.title,
+                description: movie.description,
+                user: movie.user,
+              },
+            }}
             key={index}
-            image={movie.image}
-            title={movie.title}
-            description={movie.description}
-            user={movie.user}
-          />
+          >
+            <Card
+              image={movie.image}
+              title={movie.title}
+              description={movie.description}
+              user={movie.user}
+            />
+          </Link>
         ))}
       </div>
     </>
