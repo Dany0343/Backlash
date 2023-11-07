@@ -5,7 +5,7 @@ import Logo from "../../public/images/backlash.png";
 export default function Header() {
   return (
     <header>
-      <ul className="w-full flex flex-row justify-between items-center gap-20">
+      <ul className="w-full flex flex-row justify-between items-center gap-20 sm: flex-col md: flex-col">
         <div className="flex align-middle content-center ml-8 lg:ml-15">
           <Link
             href="/"
