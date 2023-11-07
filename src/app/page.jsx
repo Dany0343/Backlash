@@ -26,11 +26,11 @@ export default function Page() {
             </div>
             <div className="flex justify-center mt-5 gap-12">
               <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded md:text-3xl lg:text-5xl">
-                <Link href="./community">Peliculas</Link>
+                <Link href="./community">Movies</Link>
               </button>
 
               <button className="bg-transparent hover:bg-blue-500 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded md:text-3xl lg:text-5xl">
-                <Link href="./upload">Mi corto</Link>
+                <Link href="./upload">My Movie</Link>
               </button>
             </div>
           </div>
