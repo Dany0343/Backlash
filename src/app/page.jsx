@@ -1,4 +1,6 @@
+"use state"
 import Header from "./Header";
+import Footer from "./Footer";
 import Image from "next/image";
 import Logo from "../../public/images/hero.png";
 import Link from "next/link";
@@ -63,6 +65,7 @@ export default function Page() {
         `--------'
 
       */}
+      <Footer />
     </>
   );
 }

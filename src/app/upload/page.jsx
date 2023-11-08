@@ -1,6 +1,42 @@
+"use client"
 import Header from "../Header";
+import Footer from "../Footer";
+import { useState } from 'react';
+import axios from 'axios';
+
 
 export default function Upload() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageUpload = async () => {
+    if (selectedImage) {
+      try {
+        const reader = new FileReader();
+        reader.onloadend = async () => {
+          try {
+            const base64Image = reader.result.split(',')[1];
+  
+            await axios.post('../api/upload.js', { base64Image });
+          } catch (error) {
+            console.log('Error en la solicitud POST:', error);
+          }
+        };
+        reader.readAsDataURL(selectedImage);
+      } catch (error) {
+        console.log('Error en la lectura de la imagen:', error);
+      }
+    }
+  };
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file instanceof Blob) {
+      setSelectedImage(file);
+    } else {
+      console.log('No se seleccionó un archivo válido.');
+    }
+  };
+
   return (
     <>
       <Header />
@@ -155,6 +191,8 @@ export default function Upload() {
                           name="file-upload"
                           type="file"
                           class="sr-only"
+                          accept="video/*"
+                          onChange={handleImageChange}
                         />
                       </label>
                       <p class="pl-1 text-white">or drag and drop</p>
@@ -166,13 +204,14 @@ export default function Upload() {
             </div>
 
             <div class="flex justify-end mt-6">
-              <button class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-700 focus:outline-none focus:bg-gray-600">
+              <button onClick={handleImageUpload} class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-700 focus:outline-none focus:bg-gray-600">
                 Send Request
               </button>
             </div>
           </form>
         </section>
       </div>
+      <Footer />
     </>
   );
 }

@@ -9,7 +9,7 @@ export default function Header() {
         <div className="md:flex md:align-middle md:content-center md:ml-8 md:ml-15 sm:flex sm:flex-row sm:content-center sm:align-middle sm:justify-center flex align-middle justify-center">
           <Link
             href="/"
-            className="cursor-pointer text-white font-bold md:text-3xl md:self-center md:mr-1 sm:m-0 sm:text-xl sm:self-center sm:mr-1 text-2xl self-center"
+            className="cursor-pointer text-white font-bold transition duration-300 hover:text-yellow-400 md:text-3xl md:self-center md:mr-1 sm:m-0 sm:text-xl sm:self-center sm:mr-1"
           >
             Backlash
           </Link>
@@ -23,14 +23,14 @@ export default function Header() {
         <div className="md:flex md:items-center md:gap-10 md:mr-9 lg:mr-19 cursor-pointer sm:flex sm:m-0 sm:justify-center sm:gap-5 flex align-middle justify-center gap-10">
           <Link
             href="./upload"
-            className="cursor-pointer text-white font-bold text-xl md:text-3xl"
+            className="cursor-pointer text-white font-bold text-xl transition duration-300 hover:text-yellow-400 md:text-3xl md:self-center md:mr-1"
           >
             My movie
           </Link>
 
           <Link
             href="./community"
-            className="cursor-pointer text-white font-bold text-xl md:text-3xl"
+            className="cursor-pointer text-white font-bold text-xl transition duration-300 hover:text-yellow-400 md:text-3xl md:self-center md:mr-1"
           >
             Movies
           </Link>

@@ -1,4 +1,6 @@
+"use client"
 import Header from "../Header";
+import Footer from "../Footer";
 import Card from "./Card";
 import TotallyKiller from "../../../public/images/TotallyKiller.png";
 import Barbie from "../../../public/images/Barbie.png";
@@ -186,6 +188,7 @@ export default function Community() {
           </Link>
         ))}
       </div>
+      <Footer />
     </>
   );
 }
