@@ -1,40 +1,42 @@
-"use client"
+"use client";
 import Header from "../Header";
 import Footer from "../Footer";
-import { useState } from 'react';
-import axios from 'axios';
-
+import React, { useState } from "react";
 
 export default function Upload() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleImageUpload = async () => {
-    if (selectedImage) {
-      try {
-        const reader = new FileReader();
-        reader.onloadend = async () => {
-          try {
-            const base64Image = reader.result.split(',')[1];
-  
-            await axios.post('../api/upload.js', { base64Image });
-          } catch (error) {
-            console.log('Error en la solicitud POST:', error);
-          }
-        };
-        reader.readAsDataURL(selectedImage);
-      } catch (error) {
-        console.log('Error en la lectura de la imagen:', error);
-      }
-    }
-  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setSubmitting(true);
+    const formData = new FormData(event.currentTarget);
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    if (file instanceof Blob) {
-      setSelectedImage(file);
+    const data = {
+      username: formData.get("username"),
+      emailAddress: formData.get("emailAddress"),
+      title: formData.get("title"),
+      linkImage: formData.get("linkImage"),
+      date: formData.get("date"),
+      details: formData.get("details"),
+    };
+
+    // Fetch a API Route
+    const response = await fetch("/api/submitForm", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    // Maneja la respuesta
+    if (response.ok) {
+      // Haz algo con la respuesta si es exitosa, por ejemplo, mostrar un mensaje de éxito
     } else {
-      console.log('No se seleccionó un archivo válido.');
+      // Maneja el caso de error
     }
+
+    setSubmitting(false);
   };
 
   return (
@@ -46,13 +48,14 @@ export default function Upload() {
           <h1 class="text-xl font-bold text-white capitalize dark:text-white">
             Upload Content
           </h1>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
               <div>
                 <label class="text-white dark:text-gray-200" for="username">
                   Username
                 </label>
                 <input
+                  name="username"
                   id="username"
                   type="text"
                   class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
@@ -64,6 +67,7 @@ export default function Upload() {
                   Email Address
                 </label>
                 <input
+                  name="emailAddress"
                   id="emailAddress"
                   type="email"
                   class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
@@ -75,6 +79,7 @@ export default function Upload() {
                   Title
                 </label>
                 <input
+                  name="title"
                   id="Title"
                   type="Title"
                   class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
@@ -86,54 +91,15 @@ export default function Upload() {
                   class="text-white dark:text-gray-200"
                   for="titleConfirmation"
                 >
-                  Title Confirmation
+                  Link Imagen
                 </label>
                 <input
+                  name="linkImage"
                   id="titleConfirmation"
                   type="Title"
                   class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
                 />
               </div>
-              {/* <div>
-                <label
-                  class="text-white dark:text-gray-200"
-                  for="titleConfirmation"
-                >
-                  Color
-                </label>
-                <input
-                  id="color"
-                  type="color"
-                  class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                />
-              </div>
-              <div>
-                <label
-                  class="text-white dark:text-gray-200"
-                  for="titleConfirmation"
-                >
-                  Select
-                </label>
-                <select class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
-                  <option>Surabaya</option>
-                  <option>Jakarta</option>
-                  <option>Tangerang</option>
-                  <option>Bandung</option>
-                </select>
-              </div> */}
-              {/* <div>
-                <label
-                  class="text-white dark:text-gray-200"
-                  for="titleConfirmation"
-                >
-                  Range
-                </label>
-                <input
-                  id="range"
-                  type="range"
-                  class="block w-full py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
-                />
-              </div> */}
               <div>
                 <label
                   class="text-white dark:text-gray-200"
@@ -142,6 +108,7 @@ export default function Upload() {
                   Realease Date
                 </label>
                 <input
+                  name="date"
                   id="date"
                   type="date"
                   class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
@@ -155,6 +122,7 @@ export default function Upload() {
                   Details
                 </label>
                 <textarea
+                  name="details"
                   id="textarea"
                   type="textarea"
                   class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"
@@ -192,7 +160,6 @@ export default function Upload() {
                           type="file"
                           class="sr-only"
                           accept="video/*"
-                          onChange={handleImageChange}
                         />
                       </label>
                       <p class="pl-1 text-white">or drag and drop</p>
@@ -204,8 +171,12 @@ export default function Upload() {
             </div>
 
             <div class="flex justify-end mt-6">
-              <button onClick={handleImageUpload} class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-700 focus:outline-none focus:bg-gray-600">
-                Send Request
+              <button
+                type="submit"
+                disabled={submitting}
+                class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-md hover:bg-pink-700 focus:outline-none focus:bg-gray-600"
+              >
+                {submitting ? "Sending..." : "Send"}
               </button>
             </div>
           </form>

@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+}
+
+
+model Video {
+  id           Int      @id @default(autoincrement())
+  username     String
+  email        String   @unique
+  title        String
+  releaseDate  DateTime @map(name: "release_date")
+  details      String
+  azureLink    String?  @map(name: "azure_link")
+  imageLink    String?  @map(name: "image_link")
+}
