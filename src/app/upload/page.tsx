@@ -13,10 +13,10 @@ export default function Upload() {
 
     const data = {
       username: formData.get("username"),
-      emailAddress: formData.get("emailAddress"),
+      email: formData.get("emailAddress"),
       title: formData.get("title"),
-      linkImage: formData.get("linkImage"),
-      date: formData.get("date"),
+      imageLink: formData.get("linkImage"),
+      releaseDate: formData.get("date"),
       details: formData.get("details"),
     };
 
