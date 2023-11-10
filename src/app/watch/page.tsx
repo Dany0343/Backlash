@@ -3,26 +3,7 @@ import Header from "../Header";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import TotallyKiller from "../../../public/images/TotallyKiller.png";
-import Barbie from "../../../public/images/Barbie.png";
-import Bottoms from "../../../public/images/Bottoms.png";
-import Exorcist from "../../../public/images/exorcist.png";
-import Fairplay from "../../../public/images/fairplay.png";
-import FightClub from "../../../public/images/fightclub.png";
-import Friday13 from "../../../public/images/friday13.png";
-import Getout from "../../../public/images/getout.png";
-import NoOne from "../../../public/images/noonewillsaveyou.png";
-import Oppen from "../../../public/images/oppenheimer.png";
-import Pastlives from "../../../public/images/pastlives.png";
-import Pearl from "../../../public/images/pearl.png";
-import SAW from "../../../public/images/saw.png";
-import SAWX from "../../../public/images/sawx.png";
-import Scream from "../../../public/images/Scream.png";
-import TalkToMe from "../../../public/images/TalktoMe.png";
-import TheCreator from "../../../public/images/thecreator.png";
-import TheExorcist from "../../../public/images/theexorcist.png";
-import TheShining from "../../../public/images/theshining.png";
-import Cinema from "../../../public/images/cinema.png";
+
 
 export default function Watch() {
   // Se usa el hook
@@ -47,7 +28,7 @@ export default function Watch() {
     <>
       <Header />
       <div className="flex md:flex-col md:justify-center lg: justify-center sm:flex-col sm:gap-4 flex-col m-9">
-        <p className=" text-white font-bold lg:text-4xl md:text-3xl md:self-center lg:ml-20 sm:text-xl">
+        <p className=" text-white font-bold lg:text-4xl md:text-3xl md:self-center sm:text-xl">
           {title}
         </p>
         {/* <Image
